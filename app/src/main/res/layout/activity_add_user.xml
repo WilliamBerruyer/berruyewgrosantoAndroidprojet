@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddUserActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Add a User"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/editTextNomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name" />
+
+        <EditText
+            android:id="@+id/editTextPrenomView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="surname" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@color/colorPrimary"
+            android:text="Save"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</LinearLayout>
