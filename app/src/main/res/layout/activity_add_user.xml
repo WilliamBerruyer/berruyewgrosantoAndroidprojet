@@ -18,22 +18,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Add a User"
+            android:gravity="center_horizontal"
+            android:text="Ajouter un utilisateur"
             android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-            android:gravity="center_horizontal" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline" />
 
         <EditText
             android:id="@+id/editTextNomView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="name" />
+            android:hint="Nom" />
 
         <EditText
             android:id="@+id/editTextPrenomView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="surname" />
+            android:hint="Prénom" />
 
         <Button
             android:id="@+id/button_save"
@@ -42,7 +42,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
             android:background="@color/colorPrimary"
-            android:text="Save"
+            android:text="Enregistrer"
             android:textAllCaps="false" />
 
     </LinearLayout>

@@ -20,11 +20,17 @@ import java.util.List;
 
 public class StartActivity extends AppCompatActivity {
     //Attributs
-    private static final int REQUEST_CODE_ADD = 0;
+    private static final int REQUEST_CODE = 0;
+    private Button buttonConnect;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+    }
+
+    public void goConnect(View view) {
+        Intent intent = new Intent(this, ConnectionActivity.class);
+        startActivityForResult(intent, REQUEST_CODE);
     }
 }

@@ -51,13 +51,13 @@ public class AddUserActivity extends AppCompatActivity {
 
         // Vérifier les informations fournies par l'utilisateur
         if (sNom.isEmpty()) {
-            editTextNomView.setError("Task required");
+            editTextNomView.setError("Nom requis");
             editTextNomView.requestFocus();
             return;
         }
 
         if (sPrenom.isEmpty()) {
-            editTextPrenomView.setError("Desc required");
+            editTextPrenomView.setError("Prénom requis");
             editTextPrenomView.requestFocus();
             return;
         }
