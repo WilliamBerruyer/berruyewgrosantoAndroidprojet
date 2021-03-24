@@ -3,6 +3,7 @@ package com.example.projet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import com.example.projet.db.DatabaseClient;
 import com.example.projet.db.User;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConnectionActivity extends AppCompatActivity {
     //Attributs
@@ -29,7 +31,8 @@ public class ConnectionActivity extends AppCompatActivity {
 
         // Récupération du DatabaseClient
         mDb = DatabaseClient.getInstance(getApplicationContext());
-
+        // Mise à jour des utilisateurs
+        getUsers();
         // Récupérer les vues
         listUser = findViewById(R.id.listUser);
         buttonAddUser = findViewById(R.id.button_addUser);
@@ -37,7 +40,43 @@ public class ConnectionActivity extends AppCompatActivity {
         // Lier l'adapter au listView
         adapter = new UsersAdapter(this, new ArrayList<User>());
         listUser.setAdapter(adapter);
+
+
     }
+    private void getUsers() {
+        ///////////////////////
+        // Classe asynchrone permettant de récupérer des taches et de mettre à jour le listView de l'activité
+        class GetUsers extends AsyncTask<Void, Void, List<User>> {
+
+            @Override
+            protected List<User> doInBackground(Void... voids) {
+                List<User> userList = mDb.getAppDatabase()
+                        .userDAO()
+                        .getAll();
+                return userList;
+            }
+
+            @Override
+            protected void onPostExecute(List<User> users) {
+                super.onPostExecute(users);
+
+                // Mettre à jour l'adapter avec la liste de taches
+                adapter.clear();
+                adapter.addAll(users);
+
+                // Now, notify the adapter of the change in source
+                adapter.notifyDataSetChanged();
+            }
+        }
+
+        //////////////////////////
+        // IMPORTANT bien penser à executer la demande asynchrone
+        // Création d'un objet de type GetUsers et execution de la demande asynchrone
+        GetUsers gt = new GetUsers();
+        gt.execute();
+    }
+
+
     public void goNewAccount(View view) {
         Intent intent = new Intent(this, AddUserActivity.class);
         startActivityForResult(intent, REQUEST_CODE);
