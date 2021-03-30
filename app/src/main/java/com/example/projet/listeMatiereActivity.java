@@ -2,13 +2,14 @@ package com.example.projet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
-
-import com.example.projet.db.User;
 
 public class listeMatiereActivity extends AppCompatActivity {
     //Attributs
+//    private static final int REQUEST_CODE = 0;
     public static final String USER_CONNECTED = "user_key";
     TextView connectedAs;
 
@@ -23,5 +24,10 @@ public class listeMatiereActivity extends AppCompatActivity {
         else{
             connectedAs.setText("Connecté en tant que "+getIntent().getStringExtra(USER_CONNECTED));
         }
+    }
+
+    public void goMath(View view) {
+        Intent intent = new Intent(this, ExerciceMathActivity.class);
+        startActivity(intent);
     }
 }

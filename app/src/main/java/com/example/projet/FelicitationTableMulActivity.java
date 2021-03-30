@@ -14,7 +14,7 @@ public class FelicitationTableMulActivity extends AppCompatActivity {
         setContentView(R.layout.activity_felicitation);
     }
     public void goMain(View view){
-        Intent intent = new Intent(this, ExerciceMaths.class);
+        Intent intent = new Intent(this, ExerciceMathActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }

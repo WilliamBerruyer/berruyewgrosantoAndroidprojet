@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ExerciceMaths extends AppCompatActivity {
+public class ExerciceMathActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +17,7 @@ public class ExerciceMaths extends AppCompatActivity {
     public void onExercice1(View view) {
 
         // Création d'une intention
-        Intent TableMultiplicationIntent = new Intent(ExerciceMaths.this, ExerciceMultiplication.class);
+        Intent TableMultiplicationIntent = new Intent(ExerciceMathActivity.this, ExerciceMultiplication.class);
 
         // Lancement de la demande de changement d'activité
         startActivity(TableMultiplicationIntent);
@@ -26,7 +26,7 @@ public class ExerciceMaths extends AppCompatActivity {
     public void onExercice2(View view) {
 
         // Création d'une intention
-        Intent AddidtionIntent = new Intent(ExerciceMaths.this, AdditionActivity.class);
+        Intent AddidtionIntent = new Intent(ExerciceMathActivity.this, AdditionActivity.class);
 
         // Lancement de la demande de changement d'activité
         startActivity(AddidtionIntent);
