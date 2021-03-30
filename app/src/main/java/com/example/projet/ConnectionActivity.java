@@ -76,6 +76,23 @@ public class ConnectionActivity extends AppCompatActivity {
         gt.execute();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        // Mise à jour des taches
+        getUsers();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Mise à jour des taches
+        getUsers();
+
+    }
+
 
     public void goNewAccount(View view) {
         Intent intent = new Intent(this, AddUserActivity.class);

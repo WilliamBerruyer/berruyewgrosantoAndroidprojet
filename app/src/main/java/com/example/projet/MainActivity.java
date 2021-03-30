@@ -85,8 +85,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Mise à jour des taches
-        //getTasks();
+
     }
 
 
@@ -131,6 +130,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+
+        // Mise à jour des taches
+        getUsers();
+
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
 
         // Mise à jour des taches
         getUsers();
