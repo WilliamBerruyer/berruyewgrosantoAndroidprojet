@@ -33,4 +33,8 @@ public class StartActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ConnectionActivity.class);
         startActivityForResult(intent, REQUEST_CODE);
     }
+    public void goActivity(View view) {
+        Intent intent = new Intent(this, listeMatiereActivity.class);
+        startActivityForResult(intent, REQUEST_CODE);
+    }
 }

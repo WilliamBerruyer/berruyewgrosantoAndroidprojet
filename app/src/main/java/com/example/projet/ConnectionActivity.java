@@ -2,12 +2,17 @@ package com.example.projet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.projet.db.DatabaseClient;
 import com.example.projet.db.User;
@@ -40,6 +45,19 @@ public class ConnectionActivity extends AppCompatActivity {
         // Lier l'adapter au listView
         adapter = new UsersAdapter(this, new ArrayList<User>());
         listUser.setAdapter(adapter);
+
+        // Ajout d'un événement click à la listView
+        listUser.setOnItemClickListener((parent, view, position, id) -> {
+            System.out.println("test");
+
+            // Récupération de l'utilisateur cliqué à l'aide de l'adapter
+            User user = adapter.getItem(position);
+
+            Intent intent = new Intent(this, listeMatiereActivity.class);
+            String nomUser = user.getPrenom()+" "+user.getNom();
+            intent.putExtra(listeMatiereActivity.USER_CONNECTED, nomUser);
+            startActivityForResult(intent, REQUEST_CODE);
+        });
 
 
     }
