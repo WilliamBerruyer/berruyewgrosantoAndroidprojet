@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class ExerciceMultiplication extends AppCompatActivity {
+public class ExerciceMultiplicationActivity extends AppCompatActivity {
     public final static int HELLO_REQUEST = 0;
 
     @Override

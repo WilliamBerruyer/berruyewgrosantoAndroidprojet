@@ -19,7 +19,7 @@ public class FelicitationTableMulActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void goTable(View view){
-        Intent intent = new Intent(this, ExerciceMultiplication.class);
+        Intent intent = new Intent(this, ExerciceMultiplicationActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }

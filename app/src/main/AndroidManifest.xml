@@ -13,7 +13,7 @@
         <activity android:name=".ErreurTableMulActivity"></activity>
         <activity android:name=".TableMultiplicationActivity"></activity>
         <activity android:name=".FelicitationTableMulActivity"></activity>
-        <activity android:name=".ExerciceMultiplication"></activity>
+        <activity android:name=".ExerciceMultiplicationActivity"></activity>
         <activity android:name=".ExerciceMathActivity"></activity>
         <activity android:name=".listeMatiereActivity"></activity>
         <activity android:name=".ConnectionActivity" />

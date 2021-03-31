@@ -17,7 +17,7 @@ public class ExerciceMathActivity extends AppCompatActivity {
     public void onExercice1(View view) {
 
         // Création d'une intention
-        Intent TableMultiplicationIntent = new Intent(ExerciceMathActivity.this, ExerciceMultiplication.class);
+        Intent TableMultiplicationIntent = new Intent(ExerciceMathActivity.this, ExerciceMultiplicationActivity.class);
 
         // Lancement de la demande de changement d'activité
         startActivity(TableMultiplicationIntent);
@@ -26,7 +26,7 @@ public class ExerciceMathActivity extends AppCompatActivity {
     public void onExercice2(View view) {
 
         // Création d'une intention
-        Intent AddidtionIntent = new Intent(ExerciceMathActivity.this, AdditionActivity.class);
+        Intent AddidtionIntent = new Intent(ExerciceMathActivity.this, ExerciceAdditionActivity.class);
 
         // Lancement de la demande de changement d'activité
         startActivity(AddidtionIntent);
