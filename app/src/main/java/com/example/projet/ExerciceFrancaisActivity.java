@@ -64,6 +64,7 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
                 adapter.addAll(questions);
 
                 // Now, notify the adapter of the change in source
+
                 adapter.notifyDataSetChanged();
             }
         }
