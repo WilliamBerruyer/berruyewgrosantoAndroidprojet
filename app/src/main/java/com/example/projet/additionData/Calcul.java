@@ -1,6 +1,4 @@
 package com.example.projet.additionData;
-import java.util.Random;
-
 
 public class Calcul {
 
