@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.projet.additionData.Calcul;
 
 public class ExerciceAdditionActivity extends AppCompatActivity {
-
     private static final int HELLO_REQUEST = 0;
     int n;
     TextView nbTour;

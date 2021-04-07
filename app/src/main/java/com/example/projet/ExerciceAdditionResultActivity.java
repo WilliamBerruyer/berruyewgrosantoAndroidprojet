@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import java.lang.reflect.Array;
@@ -123,5 +124,11 @@ public class ExerciceAdditionResultActivity extends AppCompatActivity {
             nbError=nbError+1;
         }
         errorTxt.setText("Tu as fait : "+nbError+" erreur(s)");
+    }
+
+    public void goMain(View view){
+        Intent intent = new Intent(this, ExerciceMathActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
     }
 }
