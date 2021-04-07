@@ -30,4 +30,8 @@ public class listeMatiereActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ExerciceMathActivity.class);
         startActivity(intent);
     }
+    public void goFrancais(View view) {
+        Intent intent = new Intent(this, ExerciceFrancaisActivity.class);
+        startActivity(intent);
+    }
 }

@@ -29,7 +29,7 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_exercice_addition);
 
         nbTour = findViewById(R.id.nbTour);
-        calculTxt = findViewById(R.id.calculTxt);
+        calculTxt = findViewById(R.id.questionTxt);
         answer = findViewById(R.id.réponse);
         next = findViewById(R.id.rep1);
 
