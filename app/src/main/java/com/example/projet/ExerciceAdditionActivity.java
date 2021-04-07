@@ -2,7 +2,6 @@ package com.example.projet;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,8 +10,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projet.additionData.Calcul;
-
-import java.lang.reflect.Array;
 
 public class ExerciceAdditionActivity extends AppCompatActivity {
 
@@ -35,7 +32,7 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
         nbTour = findViewById(R.id.nbTour);
         calculTxt = findViewById(R.id.calculTxt);
         answer = findViewById(R.id.réponse);
-        next = findViewById(R.id.next);
+        next = findViewById(R.id.rep1);
 
         n=1;
         nbTour.setText("Question n°"+n);

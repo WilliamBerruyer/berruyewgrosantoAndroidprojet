@@ -31,28 +31,30 @@ public class TableMultiplicationActivity extends AppCompatActivity {
 
     public void clicVal (View v){
         EditText e1 = findViewById(R.id.edit1);
-
         EditText e2 = findViewById(R.id.edit2);
         EditText e3 = findViewById(R.id.edit3);
-        int valeur = getIntent().getIntExtra(NOMBRE,0);
-        int nbErreur=0;
-        if (Integer.parseInt(e1.getText().toString()) != valeur*1){
-            nbErreur=nbErreur+1;
+        if (!e1.getText().toString().equals("")&&!e2.getText().toString().equals("")&&!e3.getText().toString().equals("")){
+            int valeur = getIntent().getIntExtra(NOMBRE,0);
+            int nbErreur=0;
+            if (Integer.parseInt(e1.getText().toString()) != valeur*1){
+                nbErreur=nbErreur+1;
+            }
+            if (Integer.parseInt(e2.getText().toString()) != valeur*2){
+                nbErreur=nbErreur+1;
+            }
+            if (Integer.parseInt(e3.getText().toString()) != valeur*3){
+                nbErreur=nbErreur+1;
+            }
+            if (nbErreur>0){
+                Intent intent = new Intent(this, ErreurTableMulActivity.class);
+                intent.putExtra(ErreurTableMulActivity.NB_ERREUR, nbErreur);
+                startActivityForResult(intent, RESULT_REQUEST);
+            }
+            else{
+                Intent intent = new Intent(this, FelicitationTableMulActivity.class);
+                startActivityForResult(intent, RESULT_REQUEST);
+            }
         }
-        if (Integer.parseInt(e2.getText().toString()) != valeur*2){
-            nbErreur=nbErreur+1;
-        }
-        if (Integer.parseInt(e3.getText().toString()) != valeur*3){
-            nbErreur=nbErreur+1;
-        }
-        if (nbErreur>0){
-            Intent intent = new Intent(this, ErreurTableMulActivity.class);
-            intent.putExtra(ErreurTableMulActivity.NB_ERREUR, nbErreur);
-            startActivityForResult(intent, RESULT_REQUEST);
-        }
-        else{
-            Intent intent = new Intent(this, FelicitationTableMulActivity.class);
-            startActivityForResult(intent, RESULT_REQUEST);
-        }
+
     }
 }

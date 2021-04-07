@@ -36,12 +36,6 @@
                 android:text="TextView"
                 android:textSize="24sp" />
 
-            <EditText
-                android:id="@+id/réponse"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" />
         </LinearLayout>
 
         <LinearLayout
@@ -53,10 +47,25 @@
 
             <Button
                 android:id="@+id/rep1"
-                android:layout_width="wrap_content"
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Suivant"
-                android:onClick="clicValider"/>
+                android:layout_margin="10dp"
+                android:onClick="clicValider"
+                android:text="rep1" />
+
+            <Button
+                android:id="@+id/rep2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="rep2" />
+
+            <Button
+                android:id="@+id/rep3"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="rep3" />
 
         </LinearLayout>
 

@@ -5,8 +5,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Calcul {
 
-    private int min = 0;
-    private int max = 20;
+    private int min = 1;
+    private int max = 30;
     Random rand = new Random();
     private final int nombre1 =  min + rand.nextInt((max - min) + 1);
     private final int nombre2 = min + rand.nextInt((max - min) + 1);

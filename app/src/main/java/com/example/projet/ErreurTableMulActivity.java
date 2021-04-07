@@ -14,7 +14,8 @@ public class ErreurTableMulActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.acitivity_erreur_table_mul);
         TextView text = findViewById(R.id.nbErreurText);
-        text.setText(text.getText().toString() + getIntent().getStringExtra(NB_ERREUR));
+        int valeur = getIntent().getIntExtra(NB_ERREUR,0);
+        text.setText(text.getText().toString() + valeur);
     }
     public void goBack(View view){
         setResult(RESULT_OK);
