@@ -10,12 +10,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet">
-        <activity android:name=".ErreurTableMulActivity"></activity>
-        <activity android:name=".TableMultiplicationActivity"></activity>
-        <activity android:name=".FelicitationTableMulActivity"></activity>
-        <activity android:name=".ExerciceMultiplicationActivity"></activity>
-        <activity android:name=".ExerciceMathActivity"></activity>
-        <activity android:name=".listeMatiereActivity"></activity>
+        <activity android:name=".ExerciceAdditionResultActivity"></activity>
+        <activity android:name=".ErreurTableMulActivity" />
+        <activity android:name=".TableMultiplicationActivity" />
+        <activity android:name=".ExerciceAdditionActivity" />
+        <activity android:name=".FelicitationTableMulActivity" />
+        <activity android:name=".ExerciceMultiplicationActivity" />
+        <activity android:name=".ExerciceMathActivity" />
+        <activity android:name=".listeMatiereActivity" />
         <activity android:name=".ConnectionActivity" />
         <activity android:name=".StartActivity">
             <intent-filter>

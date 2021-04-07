@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="270dp"
+        tools:layout_editor_absoluteY="58dp">
+
+        <TextView
+            android:id="@+id/result1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/result10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/Nberror"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:paddingBottom="1dp"
+            android:text="nbTour"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Revenir à l'accueil" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
