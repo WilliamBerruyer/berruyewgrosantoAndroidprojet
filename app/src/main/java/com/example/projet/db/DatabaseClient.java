@@ -58,6 +58,17 @@ public class DatabaseClient {
             //
             db.execSQL("INSERT INTO user (nom, prenom) VALUES(\"Denzel\", \"Curry\");");
             db.execSQL("INSERT INTO user (nom, prenom) VALUES(\"Kendrick\", \"Lamar\");");
+            db.execSQL("INSERT INTO Question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Sur quel continent se situe le Japon ?\", \"En Asie\", \"En Océanie\", \"En Afrique\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"… de te plaindre !\", \"Arrête\", \"Arrêtes\", \"Arête\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Je regrette qu’il … pris cette décision.\", \"ait\", \"es\", \"est\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Cette chanteuse a une … incroyable.\", \"voix\", \"voie\", \"vois\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"… sont les horaires de la ligne 1 ?\", \"Quelles\", \"Quel\", \"Qu’elles\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Ces billets d’avion coûtent ….\", \"chers\", \"chères\", \"cher\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Ils veulent … comprendre le subjonctif.\", \"tous\", \"tout \", \"touts\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"J’ai arrêté d’apprendre l’… c’était trop difficile.\", \"allemand\", \"Allemand\", \"alemand\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Quelle est la capitale de l’Espagne ?\", \"Madrid\", \"Barcelone\", \"Rome\" );");
+            db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Qui a découvert les Amériques le 12 octobre 1492 ?\", \"Christophe Colomb\", \"Vasco De Gama\", \"Jack Sparrow\" );");
+
 
         }
     };

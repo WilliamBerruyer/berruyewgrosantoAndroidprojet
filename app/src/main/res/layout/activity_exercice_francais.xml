@@ -6,8 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ConnectionActivity">
 
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
     <ListView
-        android:id="@+id/listUser"
+        android:id="@+id/listQuestions"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
