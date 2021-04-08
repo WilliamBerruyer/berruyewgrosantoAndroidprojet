@@ -54,9 +54,7 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
                 }
                 // Création d'une intention
                 Intent AddidtionIntent = new Intent(ExerciceAdditionActivity.this, ExerciceAdditionResultActivity.class);
-
                 // Lancement de la demande de changement d'activité
-
                 AddidtionIntent.putExtra(ExerciceAdditionResultActivity.ARRAYQUESTION, arrayQuestion);
                 AddidtionIntent.putExtra(ExerciceAdditionResultActivity.ARRAYBON, arrayBon);
                 startActivity(AddidtionIntent);
