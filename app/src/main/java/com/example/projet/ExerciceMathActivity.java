@@ -31,4 +31,13 @@ public class ExerciceMathActivity extends AppCompatActivity {
         // Lancement de la demande de changement d'activité
         startActivity(AddidtionIntent);
     }
+
+    public void onExercice3(View view) {
+
+        // Création d'une intention
+        Intent AddidtionIntent = new Intent(ExerciceMathActivity.this, ExerciceSoustractionActivity.class);
+
+        // Lancement de la demande de changement d'activité
+        startActivity(AddidtionIntent);
+    }
 }

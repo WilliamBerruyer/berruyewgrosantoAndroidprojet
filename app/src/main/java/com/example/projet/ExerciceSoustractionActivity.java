@@ -10,15 +10,16 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.projet.calculData.CalculAddition;
+import com.example.projet.calculData.CalculSoustraction;
 
-public class ExerciceAdditionActivity extends AppCompatActivity {
+public class ExerciceSoustractionActivity extends AppCompatActivity {
     private static final int HELLO_REQUEST = 0;
     int n;
     TextView nbTour;
     TextView calculTxt;
     EditText answer;
     Button next;
-    CalculAddition calcul;
+    CalculSoustraction calcul;
     String[] arrayQuestion = new String[11];
     String[] arrayBon = new String[11];
     @Override
@@ -35,9 +36,9 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
 
         n=1;
         nbTour.setText("Question n°"+n);
-        calcul = new CalculAddition();
-        calculTxt.setText(calcul.getNombre1()+" + "+calcul.getNombre2());
-        arrayQuestion[1]= calcul.getNombre1() + " + " + calcul.getNombre2() + " = " + calcul.getResultat();
+        calcul = new CalculSoustraction();
+        calculTxt.setText(calcul.getNombre1()+" - "+calcul.getNombre2());
+        arrayQuestion[1]= calcul.getNombre1() + " - " + calcul.getNombre2() + " = " + calcul.getResultat();
 
 
 
@@ -53,7 +54,7 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
                     arrayBon[10]= "notok";
                 }
                 // Création d'une intention
-                Intent AddidtionIntent = new Intent(ExerciceAdditionActivity.this, ExerciceAdditionResultActivity.class);
+                Intent AddidtionIntent = new Intent(ExerciceSoustractionActivity.this, ExerciceAdditionResultActivity.class);
 
                 // Lancement de la demande de changement d'activité
 
@@ -70,10 +71,10 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
                 }
                 n=n+1;
                 nbTour.setText("Question n°"+n);
-                calcul = new CalculAddition();
-                calculTxt.setText(calcul.getNombre1()+" + "+calcul.getNombre2());
+                calcul = new CalculSoustraction();
+                calculTxt.setText(calcul.getNombre1()+" - "+calcul.getNombre2());
                 answer.setText("");
-                arrayQuestion[n]= calcul.getNombre1() + " + " + calcul.getNombre2() + " = " + calcul.getResultat();
+                arrayQuestion[n]= calcul.getNombre1() + " - " + calcul.getNombre2() + " = " + calcul.getResultat();
             }
         }
 

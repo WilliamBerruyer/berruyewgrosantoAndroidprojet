@@ -1,23 +1,22 @@
-package com.example.projet.additionData;
+package com.example.projet.calculData;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 
-public class Calcul {
+public class CalculSoustraction {
 
     private int min = 1;
     private int max = 30;
     Random rand = new Random();
     private final int nombre1 =  min + rand.nextInt((max - min) + 1);
-    private final int nombre2 = min + rand.nextInt((max - min) + 1);
+    private final int nombre2 = min + rand.nextInt((nombre1 - min) + 1);
     private int resultat;
 
-    public Calcul() {
+    public CalculSoustraction() {
         initResultat();
     }
 
     private void initResultat(){
-        resultat = nombre1 + nombre2;
+        resultat = nombre1 - nombre2;
     }
 
     public int getNombre1(){

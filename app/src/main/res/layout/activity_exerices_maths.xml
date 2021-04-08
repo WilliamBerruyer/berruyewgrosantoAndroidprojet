@@ -27,4 +27,11 @@
         android:text="Additions"
         android:onClick="onExercice2"/>
 
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Soustractions"
+        android:onClick="onExercice3"/>
+
 </LinearLayout>
