@@ -56,8 +56,6 @@ public class DatabaseClient {
             super.onCreate(db);
 
             //
-            db.execSQL("INSERT INTO user (nom, prenom) VALUES(\"Denzel\", \"Curry\");");
-            db.execSQL("INSERT INTO user (nom, prenom) VALUES(\"Kendrick\", \"Lamar\");");
             db.execSQL("INSERT INTO Question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Sur quel continent se situe le Japon ?\", \"En Asie\", \"En Océanie\", \"En Afrique\" );");
             db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"… de te plaindre !\", \"Arrête\", \"Arrêtes\", \"Arête\" );");
             db.execSQL("INSERT INTO question (question, BonneRéponse, FausseRéponseUn, FausseRéponseDeux) VALUES(\"Je regrette qu’il … pris cette décision.\", \"ait\", \"es\", \"est\" );");

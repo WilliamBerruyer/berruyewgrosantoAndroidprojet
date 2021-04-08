@@ -48,7 +48,6 @@ public class ConnectionActivity extends AppCompatActivity {
 
         // Ajout d'un événement click à la listView
         listUser.setOnItemClickListener((parent, view, position, id) -> {
-            System.out.println("test");
 
             // Récupération de l'utilisateur cliqué à l'aide de l'adapter
             User user = adapter.getItem(position);

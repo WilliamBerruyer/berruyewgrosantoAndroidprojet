@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import com.example.projet.db.DatabaseClient;
 import com.example.projet.dbQuestion.Question;
 
 
@@ -35,6 +36,7 @@ public class QuestionsAdapter extends ArrayAdapter<Question> {
         // Récupération de la multiplication
         final Question question = getItem(position);
 
+
         // Charge le template XML
         LayoutInflater inflater = (LayoutInflater) getContext()
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -45,10 +47,10 @@ public class QuestionsAdapter extends ArrayAdapter<Question> {
         TextView textViewDesc = (TextView) rowView.findViewById(R.id.textViewDesc);
 
         //
-        textViewDesc.setText(question.getQuestion()  + " "+ question.getBonneRéponse() + " " + question.getFausseRéponseUn() + " " + question.getFausseRéponseDeux() );
+        textViewDesc.setText(question.getQuestion() );
 
 
-        //
+        // + " "+ question.getBonneRéponse() + " " + question.getFausseRéponseUn() + " " + question.getFausseRéponseDeux()
         return rowView;
     }
 
