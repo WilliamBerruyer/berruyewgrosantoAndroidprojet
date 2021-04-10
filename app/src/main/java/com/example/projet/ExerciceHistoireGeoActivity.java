@@ -2,35 +2,28 @@ package com.example.projet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.projet.calculData.CalculSoustraction;
-import com.example.projet.db.AppDatabase;
 import com.example.projet.db.DatabaseClient;
-import com.example.projet.db.User;
 import com.example.projet.dbQuestion.Question;
+import com.example.projet.dbQuestion.QuestionHG;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
 
 
-public class ExerciceFrancaisActivity extends AppCompatActivity {
+public class ExerciceHistoireGeoActivity extends AppCompatActivity {
 
     private static final int REQUEST_CODE = 0;
     private DatabaseClient mdb;
-    private List<Question> listeQuestionsAll;
-    Question[] listeQuestionsPassees = new Question[4];
+    private List<QuestionHG> listeQuestionsAll;
+    QuestionHG[] listeQuestionsPassees = new QuestionHG[4];
     String[] arrayQuestion = new String[4];
     String[] arrayBon = new String[4];
     private TextView questionTxt;
@@ -39,11 +32,11 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
     private TextView rep3;
     int n = 1;
     TextView nbTour;
-    Question q;
+    QuestionHG q;
 
-    private List<Question> QuestionList;
+    private List<QuestionHG> QuestionList;
 
-    public ExerciceFrancaisActivity() {
+    public ExerciceHistoireGeoActivity() {
     }
 
     @Override
@@ -56,28 +49,29 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
         getQuestions();
         questionTxt = findViewById(R.id.questionTxt);
         nbTour = findViewById(R.id.nbTour);
+        nbTour.setText("Question n°1");
         rep1 = findViewById(R.id.rep1);
         rep2 = findViewById(R.id.rep2);
         rep3 = findViewById(R.id.rep3);
     }
 
-    //Pour récupérer les questions
+    //Pour récupérer toutes les questions
     private void getQuestions() {
         ///////////////////////
         // Classe asynchrone permettant de récupérer des taches et de mettre à jour le listView de l'activité
-        class GetQuestions extends AsyncTask<Void, Void, List<Question>> {
+        class GetQuestions extends AsyncTask<Void, Void, List<QuestionHG>> {
 
             @Override
-            protected List<Question> doInBackground(Void... voids) {
-                QuestionList = mdb.getAppDatabase().questionDAO().getAll();
-                listeQuestionsAll = mdb.getAppDatabase().questionDAO().getAll();
+            protected List<QuestionHG> doInBackground(Void... voids) {
+                QuestionList = mdb.getAppDatabase().questionHGDAO().getAll();
+                listeQuestionsAll = mdb.getAppDatabase().questionHGDAO().getAll();
                 return QuestionList;
             }
 
             @Override
-            protected void onPostExecute(List<Question> questions) {
-               super.onPostExecute(questions);
-               affiche();
+            protected void onPostExecute(List<QuestionHG> questions) {
+                super.onPostExecute(questions);
+                affiche();
 
             }
         }
@@ -105,7 +99,6 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
 
     }
 
-    //Pour gérer l'affichage
     private void affiche(){
         Random rand = new Random();
         int i;
@@ -116,7 +109,7 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
         q=listeQuestionsAll.get(i);
         listeQuestionsPassees[1]=q;
         questionTxt.setText(q.getQuestion());
-        arrayQuestion[1]=q.getQuestion() +" "+ q.getBonneRéponse()+"\n";
+        arrayQuestion[1]=(q.getQuestion()+ " "+q.getBonneRéponse() +"\n");
         setAfficheQuestion(q);
 
     }
@@ -132,7 +125,7 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
             if (i==0){
                 i=1;
             }
-            for (Question quest : listeQuestionsPassees) {
+            for (QuestionHG quest : listeQuestionsPassees) {
                 if (quest != null){
                     if (quest.getQuestion().equals(listeQuestionsAll.get(i).getQuestion())){
                         b=false;
@@ -147,8 +140,8 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
         setAfficheQuestion(q);
     }
 
-    //Gérer l'affichage des réponses
-    private void setAfficheQuestion(Question q){
+    //Générer l'affichage des réponses
+    private void setAfficheQuestion(QuestionHG q){
         Random rand = new Random();
         int i = 1+rand.nextInt(5);
         if (i==1){
@@ -183,7 +176,7 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
         }
     }
 
-    //Quand on clique sur un bouton
+    //Quand on clique sur une réponse
     public void onClick(View v) {
         if (n==3){
             Button btnclicked = findViewById(v.getId());
@@ -197,7 +190,7 @@ public class ExerciceFrancaisActivity extends AppCompatActivity {
                 Log.d("btnclick", "notok");
             }
             // Création d'une intention
-            Intent AddidtionIntent = new Intent(ExerciceFrancaisActivity.this, ExerciceFrancaisResultActivity.class);
+            Intent AddidtionIntent = new Intent(ExerciceHistoireGeoActivity.this, ExerciceFrancaisResultActivity.class);
             // Lancement de la demande de changement d'activité
             AddidtionIntent.putExtra(ExerciceAdditionResultActivity.ARRAYQUESTION, arrayQuestion);
             AddidtionIntent.putExtra(ExerciceAdditionResultActivity.ARRAYBON, arrayBon);

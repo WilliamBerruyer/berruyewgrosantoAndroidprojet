@@ -34,4 +34,8 @@ public class listeMatiereActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ExerciceFrancaisActivity.class);
         startActivity(intent);
     }
+    public void goHG(View view) {
+        Intent intent = new Intent(this, ExerciceHistoireGeoActivity.class);
+        startActivity(intent);
+    }
 }

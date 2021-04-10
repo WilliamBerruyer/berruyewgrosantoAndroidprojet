@@ -51,7 +51,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:onClick="onClick"
-                android:text="rep1" />
+                android:text="rep1"
+                android:textAllCaps="false"
+                android:textSize="8sp" />
 
             <Button
                 android:id="@+id/rep2"
@@ -59,7 +61,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:onClick="onClick"
-                android:text="rep2" />
+                android:text="rep2"
+                android:textAllCaps="false"
+                android:textSize="8sp" />
 
             <Button
                 android:id="@+id/rep3"
@@ -67,7 +71,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:onClick="onClick"
-                android:text="rep3" />
+                android:text="rep3"
+                android:textAllCaps="false"
+                android:textSize="8sp" />
 
         </LinearLayout>
 

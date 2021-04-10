@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:gravity="center"
-        android:text="Krazy Kool Klassroom"
+        android:text="L'Ecole des Loustics"
         android:textSize="80sp"
         android:textStyle="bold" />
 

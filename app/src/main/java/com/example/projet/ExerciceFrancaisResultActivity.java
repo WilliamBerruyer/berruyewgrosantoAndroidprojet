@@ -21,10 +21,7 @@ public class ExerciceFrancaisResultActivity extends AppCompatActivity {
     public static final String ARRAYQUESTION ="arrayQ";
     public static final String ARRAYBON ="arrayB";
     int nbError = 0;
-    //
-//    ArrayList<String> arrayQuestion = intent.getStringArrayListExtra("arrayQ");
-//    String[] arrayQuestion = getIntent().getExtras().getStringArray("arrayQ");
-//    String[] arrayBon = getIntent().getExtras().getStringArray("arrayB");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

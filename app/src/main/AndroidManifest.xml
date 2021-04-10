@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet">
-        <activity android:name=".ExerciceFrancaisResultActivity"></activity>
+        <activity android:name=".ExerciceHistoireGeoActivity"></activity>
+        <activity android:name=".ExerciceFrancaisResultActivity" />
         <activity android:name=".ExerciceSoustractionActivity" />
         <activity android:name=".ExerciceFrancaisActivity" />
         <activity android:name=".ExerciceAdditionResultActivity" />
