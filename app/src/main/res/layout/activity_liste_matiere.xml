@@ -11,7 +11,8 @@
         android:id="@+id/connectedAs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="connected" />
+        android:text="connected"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/button4"

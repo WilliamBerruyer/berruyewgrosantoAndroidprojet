@@ -36,7 +36,7 @@ public class ExerciceAdditionActivity extends AppCompatActivity {
         n=1;
         nbTour.setText("Question n°"+n);
         calcul = new CalculAddition();
-        calculTxt.setText(calcul.getNombre1()+" + "+calcul.getNombre2());
+        calculTxt.setText(calcul.getNombre1()+" + "+calcul.getNombre2() +" =");
         arrayQuestion[1]= calcul.getNombre1() + " + " + calcul.getNombre2() + " = " + calcul.getResultat();
 
 

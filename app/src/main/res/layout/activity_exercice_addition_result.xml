@@ -10,6 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         tools:layout_editor_absoluteX="270dp"
         tools:layout_editor_absoluteY="58dp">
 
@@ -21,6 +23,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result2"
             android:layout_width="match_parent"
@@ -29,6 +32,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result3"
             android:layout_width="match_parent"
@@ -37,6 +41,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result4"
             android:layout_width="match_parent"
@@ -45,6 +50,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result5"
             android:layout_width="match_parent"
@@ -53,6 +59,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result6"
             android:layout_width="match_parent"
@@ -61,6 +68,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result7"
             android:layout_width="match_parent"
@@ -69,6 +77,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result8"
             android:layout_width="match_parent"
@@ -77,6 +86,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result9"
             android:layout_width="match_parent"
@@ -85,6 +95,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/result10"
             android:layout_width="match_parent"
@@ -93,6 +104,7 @@
             android:paddingBottom="1dp"
             android:text="nbTour"
             android:textSize="30sp" />
+
         <TextView
             android:id="@+id/Nberror"
             android:layout_width="match_parent"
@@ -106,8 +118,9 @@
             android:id="@+id/button9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir un autre exercice"
-            android:onClick="goMain"/>
+            android:layout_gravity="center_horizontal"
+            android:onClick="goMain"
+            android:text="Choisir un autre exercice" />
 
 
     </LinearLayout>

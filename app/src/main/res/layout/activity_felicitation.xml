@@ -17,7 +17,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="FELICITATIONS !" />
+            android:paddingBottom="50dp"
+            android:text="FELICITATIONS !"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/button5"
